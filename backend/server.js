@@ -15,7 +15,15 @@ const adminOrderRoutes = require("./routes/adminOrderRoutes");
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+  {
+  origin: [
+    "https://e-commerce-1v9u-1txci0ai8-nikithas-projects-3c730fd9.vercel.app",
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  credentials: true
+}
+));
 
 dotenv.config();
 
