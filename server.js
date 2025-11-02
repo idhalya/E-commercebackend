@@ -15,7 +15,6 @@ const adminOrderRoutes = require("./routes/adminOrderRoutes");
 
 const app = express();
 app.use(express.json());
-const cors = require("cors");
 
 app.use(cors({
   origin: [
