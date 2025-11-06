@@ -14,11 +14,11 @@ const productAdminRoutes = require("./routes/productAdminRoutes");
 const adminOrderRoutes = require("./routes/adminOrderRoutes");
 
 const app = express();
-app.use(express.json());
+
 
 app.use(cors({
   origin: [
-    "https://e-commerce-1v9u-n7kajjadz-nikithas-projects-3c730fd9.vercel.app", // frontend live URL
+    "https://e-commerce-1v9u.vercel.app", // frontend live URL
     "http://localhost:5173" // local development
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
@@ -26,6 +26,8 @@ app.use(cors({
   credentials: true
 }));
 
+app.use(express.json());
+app.options("*", cors());
 
 dotenv.config();
 
