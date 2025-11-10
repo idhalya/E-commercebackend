@@ -18,7 +18,7 @@ const app = express();
 
 app.use(cors({
   origin: [
-    "https://e-commerce-1v9u.vercel.app", // frontend live URL
+    "https://e-commerce-frontend-omega-black.vercel.app/", // frontend live URL
     "http://localhost:5173" // local development
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
